@@ -1,0 +1,1 @@
+"""Wikipedia XML stream parser."""
