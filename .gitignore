@@ -1,0 +1,26 @@
+# Environments
+.venv/
+.venv-nb/
+.env
+
+# Data (dumps and databases are large, user-local)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp

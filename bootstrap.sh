@@ -99,7 +99,7 @@ info "Kernel 'wiki-dumps (Python 3.12)' registered."
 
 if command -v nvidia-smi &>/dev/null; then
     heading "NVIDIA GPU detected — installing RAPIDS into $NOTEBOOK_VENV/..."
-    CUDA_VER=$(nvidia-smi | grep -oP "CUDA Version: \K[0-9]+" | head -1)
+    CUDA_VER=$(nvidia-smi | sed -n 's/.*CUDA Version: \([0-9][0-9]*\).*/\1/p' | head -1)
     info "CUDA $CUDA_VER  ($(nvidia-smi --query-gpu=name --format=csv,noheader | head -1))"
     uv pip install --python "$NOTEBOOK_VENV/bin/python" \
         "cudf-cu${CUDA_VER}" "cuml-cu${CUDA_VER}" \

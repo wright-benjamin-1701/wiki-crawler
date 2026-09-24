@@ -186,6 +186,6 @@ uv run pytest tests/    # Run tests
 
 ## Requirements
 
-- Python 3.14
+- Python 3.12+ (uv pins 3.14 for the extraction venv, 3.12 for notebooks)
 - uv (package manager)
 - ~25 GB disk space for a full English Wikipedia dump (55 GB preprocessed)
